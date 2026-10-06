@@ -1,0 +1,12 @@
+
+@(products: List[Product],config: play.api.Configuration)(implicit lang: Lang, messagesProvider: MessagesProvider)
+
+@main(Messages("application.name"),config) {
+
+<dl class="products">
+    @for(product <- products){
+    <dt>@product.name</dt>
+    <dt>@product.description</dt>
+    }
+</dl>
+}
